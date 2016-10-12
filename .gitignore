@@ -1,0 +1,19 @@
+#Django gitignore
+
+cache/*
+*.egg-info
+*.pot
+*.py[co]
+__pycache__
+*/__pycache__
+*/__pyca*
+.env
+MANIFEST
+dist/
+docs/_build/
+docs/locale/
+node_modules/
+tests/coverage_html/
+tests/.coverage
+build/
+tests/report/
