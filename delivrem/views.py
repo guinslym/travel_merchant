@@ -12,9 +12,11 @@ from django.views.generic import edit, DetailView, ListView, TemplateView
 from django.views.generic import CreateView, UpdateView, DeleteView
 from django.contrib.auth.decorators import login_required
 
+from braces.views import LoginRequiredMixin
 
 
-class ProductListView(ListView):
+
+class ProductListView(LoginRequiredMixin, ListView):
     model = Product
     template_name = 'products.html'
     context_object_name = 'products'
@@ -22,7 +24,7 @@ class ProductListView(ListView):
     def get_queryset(self):
         return Product.objects.all()
 
-class ProductCreateView(CreateView):
+class ProductCreateView(LoginRequiredMixin, CreateView):
     form_class = ProductForm
     template_name = "product_create.html"
 
@@ -33,7 +35,7 @@ class ProductCreateView(CreateView):
 
 product_new = login_required(ProductCreateView.as_view())
 
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(LoginRequiredMixin, UpdateView):
     model = Product
     form_class = ProductEditForm
     template_name = "product_update.html"
@@ -51,7 +53,7 @@ class ProductUpdateView(UpdateView):
 
 post_edit = ProductUpdateView.as_view()
 
-class ProductDetailView(DetailView):
+class ProductDetailView(LoginRequiredMixin, DetailView):
     template_name = "detail.html"
     model = Product
     """
@@ -59,7 +61,7 @@ class ProductDetailView(DetailView):
     """
 
 
-class  ProductDeleteView(DeleteView):
+class  ProductDeleteView(LoginRequiredMixin, DeleteView):
     model = Product
     template_name = 'delete_confirm.html'
 
