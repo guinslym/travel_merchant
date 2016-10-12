@@ -5,6 +5,7 @@ from .forms import (
 from .models import Product
 
 from django.core.urlresolvers import reverse_lazy
+from django.contrib.auth.models import User
 
 
 
