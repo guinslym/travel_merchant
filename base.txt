@@ -17,6 +17,7 @@ whitenoise
 django-vote
 djangoajax
 django-contrib-comments
+django-registration-redux
 
 #essaie
 django-rest-auth
