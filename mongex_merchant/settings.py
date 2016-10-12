@@ -39,6 +39,8 @@ INSTALLED_APPS = (
     #'django.contrib.sites',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'secretballot',
+    'likes',
     'django_extensions',
     'crispy_forms',
     'registration',
