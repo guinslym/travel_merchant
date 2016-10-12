@@ -10,6 +10,7 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
 from django.views.generic import edit, DetailView, ListView, TemplateView
 from django.views.generic import CreateView, UpdateView, DeleteView
+from django.contrib.auth.decorators import login_required
 
 
 
