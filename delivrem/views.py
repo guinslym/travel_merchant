@@ -1,3 +1,9 @@
+from .forms import (
+        ProductForm,
+        ProductEditForm
+    )
+
+
 
 class ProductListView(ListView):
     model = Product
