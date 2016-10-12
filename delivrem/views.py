@@ -2,6 +2,7 @@ from .forms import (
         ProductForm,
         ProductEditForm
     )
+from .models import Product
 
 
 
