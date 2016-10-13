@@ -12,6 +12,8 @@ import datetime
 from django.utils import timezone
 from django.forms.models import model_to_dict
 from django.core.validators import MaxValueValidator
+
+from updown.fields import RatingField
 # Create your models here.
 '''
  ☐ User
@@ -35,6 +37,7 @@ class Product(TimeStampedModel):
     quantity = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(100),])
     #did this product have been sale
     sale = models.BooleanField(default=False)
+    rating = RatingField(can_change_vote=True)
 
     def __str__(self):
         return str(self.id)

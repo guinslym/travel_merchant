@@ -36,17 +36,20 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    #'django.contrib.sites',
+    'fluent_comments',
+    'crispy_forms',
+    'django_comments',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-    'secretballot',
-    'likes',
     'django_extensions',
     'crispy_forms',
+    "friendship",
     'registration',
     'delivrem',
 )
 
+COMMENTS_APP = 'fluent_comments'
 SITE_ID = 1
 
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.

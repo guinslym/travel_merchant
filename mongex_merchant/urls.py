@@ -20,4 +20,6 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('delivrem.urls', namespace='delivrem')),
     url(r'^accounts/', include('registration.backends.default.urls')),
+    url(r'^delivrem/comments/', include('fluent_comments.urls')),
+    url(r'^friendship/', include('friendship.urls')),
 ]

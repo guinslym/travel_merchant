@@ -19,6 +19,10 @@ djangoajax
 django-contrib-comments
 django-registration-redux
 
+
+django-fluent-comments
+django-uptown
+
 #essaie
 django-rest-auth
 when-changed==0.3.0
